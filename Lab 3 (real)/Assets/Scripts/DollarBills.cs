@@ -16,6 +16,8 @@ public class DollarBills : MonoBehaviour
     void PrintResults()
     {
         output = "You will recieve ";
+        if (inputDollars == 0)
+            output += "no bills.";
         int currentValue = inputDollars;
         int[] billValues = { 100, 50, 20, 10, 5, 1 };
         foreach (int value in  billValues)
